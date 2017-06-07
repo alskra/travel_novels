@@ -20,6 +20,7 @@
     "slick-carousel": "*",
     "perfect-scrollbar": "*",
     "jquery-validation": "*",
-    "jquery-mask-plugin": "*"
+    "jquery-mask-plugin": "*",
+    "fancybox": "*"
   }
 }

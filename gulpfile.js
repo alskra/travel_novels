@@ -147,7 +147,7 @@ function getDepsObj(file) {
 gulp.task('html', gulp.series(
     function getHTML() {
         return combiner(
-            gulp.src(['markup/pages/*.pug']),
+            gulp.src(['markup/pages/**/*.pug']),
             gulpIf(global.isWatch, emitty.stream(global.emittyChangedFile)),
             pug({
                 pretty: true,
@@ -225,7 +225,7 @@ gulp.task('css:blocks', function () {
                 //console.log(file.relative);
             }),
         sourcemaps.init(),
-        cache('stylus'),
+        gulpIf(function (file) {return file.stem !== 'variables' && file.stem !== 'mixins'}, cache('stylus')),
         debug({title: 'CSS:blocks-after-cache'}),
         stylus({
             'include css': true,
