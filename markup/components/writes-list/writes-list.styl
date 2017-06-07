@@ -1,0 +1,14 @@
+.writes-list
+  .row
+    display flex
+    flex-flow row wrap
+  &_one-row
+    .write-item
+      &:last-child
+        display none
+
+  @media (min-width $screen-md-min)
+    &_one-row
+      .write-item
+        &:last-child
+          display block

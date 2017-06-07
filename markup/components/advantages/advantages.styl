@@ -1,0 +1,60 @@
+.advantages
+  display flex
+  flex-flow row wrap
+  padding 10px 0
+  margin 0 auto
+
+  &__item
+    flex none
+    display flex
+    align-items center
+    color #747474
+    font-size rem-calc(14)
+    line-height (20/14)
+    width 100%
+    padding 10px 10px
+
+  &__icon
+    flex none
+    color $brown-1
+    font-size 38px
+    line-height 1em
+    text-align center
+    width 55px
+    margin-right 14px
+
+    &.gly-advantage-2
+      font-size 37px
+
+    &.gly-advantage-3
+      font-size 40px
+
+    &.gly-advantage-4
+      font-size 40px
+
+  &__text
+    flex 1 1 auto
+    overflow hidden
+    margin 0
+
+  @media (min-width 600px)
+    max-width 600px
+
+    &__item
+      width 50%
+
+  @media (min-width $screen-sm-min)
+    max-width 600px
+
+  @media (min-width $screen-md-min)
+    max-width none
+
+  @media (min-width $screen-lg-min)
+    padding 20px 0
+
+    &__item
+      width 25%
+      padding 10px 5px
+
+    &__icon
+      width auto

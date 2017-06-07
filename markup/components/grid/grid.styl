@@ -1,0 +1,73 @@
+.grid
+  &_1
+    & {$p}__col
+      padding 0 10px
+
+  &_2
+    & {$p}__col
+      padding 0 10px
+
+  &_3
+    & {$p}__col
+      padding 0 10px
+
+  @media (min-width 541px)
+    &_2
+      & {$p}__col
+        &_2, &_3
+          float left
+        &_2
+          width percentage(7/12)
+        &_3
+          width percentage(5/12)
+
+  @media (min-width $screen-md-min)
+    &_1
+      >.row
+        display flex
+        align-items flex-start
+        &:before, &:after
+          content normal
+      & {$p}__col
+        &_1
+          flex none
+          width 230px
+
+        &_2
+          flex 1 1 auto
+          overflow hidden
+
+        &.affix-col-position
+          margin-top -70px
+
+    &_2
+      >.row
+        display flex
+        &:before, &:after
+          content normal
+      & {$p}__col
+        float none
+        flex none
+        &_1
+          width percentage(533/1170)
+        &_2
+          width percentage((293 + $grid-gutter-width)/1170)
+          margin-left auto
+        &_3
+          width percentage((215 + $grid-gutter-width)/1170)
+
+    &_3
+      >.row
+        display flex
+        align-items flex-start
+        &:before, &:after
+          content normal
+      & {$p}__col
+        &_1
+          flex none
+          width 230px
+
+        &_2
+          flex 1 1 auto
+          overflow hidden
+          order 1

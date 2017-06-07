@@ -1,0 +1,8 @@
+mixin write-item(item)
+  article.-write-item&attributes(attributes)
+    +a().__img-wrap
+      +img(item.img, item.title, 'fit').__img
+    h2.__title
+      +a().__title-link= item.title
+    footer.__footer
+      +a().__read-more Читать далее#[span.icon.icon-angle-right-2]

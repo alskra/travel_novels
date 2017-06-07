@@ -1,0 +1,143 @@
+.menu
+  background-color #90c04b
+
+  &__item
+    &.opened
+      &>{$p}__btn
+        &_lvl_1
+          &, &:hover, &:focus
+            background-color #90c04b
+          &>{$p}__icon
+            &.icon-plus-1
+              display none
+            &.icon-minus-1
+              display block
+
+        &_lvl_2
+          &, &:hover, &:focus
+            background-color #6f9d39
+
+        &_lvl_3
+          &, &:hover, &:focus
+            background-color #6f9d39
+
+    &_current
+      &>{$p}__btn
+        &_lvl_1
+          &, &:hover, &:focus
+            background-color #90c04b
+
+        &_lvl_2
+          &, &:hover, &:focus
+            background-color #6f9d39
+
+        &_lvl_3
+          &, &:hover, &:focus
+            background-color #6f9d39
+
+  &__btn
+    display block
+    &_lvl_1
+      display flex
+      align-items flex-start
+      color white
+      text-decoration none
+      font-size 15px
+      font-weight 700
+      line-height (18/15)em
+      text-transform none
+      padding 16px 15px
+      background-color #90c04b
+      &:hover, &:focus
+        color white
+        text-decoration none
+        background-color #90c04b
+
+    &_lvl_2
+      display flex
+      align-items flex-start
+      color white
+      text-decoration none
+      font-size 15px
+      font-weight 700
+      line-height (18/15)em
+      text-transform uppercase
+      padding 16px 10px 16px 20px
+      background-color #90c04b
+      &:hover, &:focus
+        color white
+        text-decoration none
+        background-color #6f9d39
+
+    &_lvl_3
+      display flex
+      align-items flex-start
+      color white
+      text-decoration none
+      font-size 15px
+      font-weight 700
+      line-height (18/15)em
+      text-transform uppercase
+      padding 16px 10px 16px 40px
+      background-color #90c04b
+      &:hover, &:focus
+        color white
+        text-decoration none
+        background-color #6f9d39
+
+  &__label
+    display block
+    flex 1 1 auto
+    text-overflow ellipsis
+
+  &__icon
+    display block
+    flex none
+
+    &_lvl_1
+      font-size 18px
+      text-align center
+      width 20px
+      &.icon-minus-1
+        display none
+      &.icon-menu-3
+        font-size 15px
+
+    &_lvl_2
+      font-size 18px
+      text-align center
+      width 20px
+
+    &_lvl_3
+      font-size 18px
+      text-align center
+      width 20px
+
+  @media (min-width $screen-md-min)
+    display flex
+
+    &__item
+      &.opened
+        &>{$p}__btn
+          &_lvl_1
+            &, &:hover, &:focus
+              background-color #6f9d39
+
+      &_current
+        &>{$p}__btn
+          &_lvl_1
+            &, &:hover, &:focus
+              background-color #6f9d39
+
+    &__btn
+      &_lvl_1
+        text-transform uppercase
+        padding 16px 10px
+        background-color #90c04b
+        &:hover, &:focus
+          background-color #6f9d39
+
+    &__item
+      flex 1 1 auto
+      text-align center
+      overflow hidden

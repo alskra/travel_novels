@@ -1,0 +1,456 @@
+<!DOCTYPE HTML>
+<html lang="en-EN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Stylize selects across all browsers with ease">
+	<meta name="keywords" content="select,stylize,jquery,javascript,ikselect">
+	<meta name="author" content="Igor Kozlov">
+	<title>ikSelect 1.1.0</title>
+	<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/tomorrow.min.css">
+	<link rel="stylesheet" href="docs/css/style.css" media="all">
+</head>
+<body>
+<div id="wrap">
+	<header class="header">
+		<h1>
+			<a href="index.html">ikSelect</a>
+			<span>1.1.0</span>
+		</h1>
+
+		<ul class="header-links">
+			<li><a href="https://github.com/Igor10k/ikSelect" title="GitHub"><i class="icon-github"></i></a></li>
+			<li><a href="https://github.com/Igor10k/ikSelect/zipball/master" title="Download"><i class="icon-cloud-download"></i></a></li>
+		</ul>
+
+		<nav class="header-nav">
+			<ul>
+				<li><a href="#intro">Intro</a></li>
+				<li><a href="#features">Features</a></li>
+				<li><a href="#install">Installation</a></li>
+				<li><a href="#options">Options</a></li>
+				<li><a href="#callbacks">Callbacks</a></li>
+				<li><a href="#api">API</a></li>
+				<li><a href="#examples">Examples</a></li>
+			</ul>
+		</nav>
+	</header><!--/.header-->
+
+	<section id="intro" class="section intro">
+		<p>ikSelect helps you stylize selects.</p>
+
+		<div class="inlines">
+			<div class="inline">
+				<select class="intro-select1">
+					<option>like this</option>
+					<option>not bad</option>
+					<option>isn't it?</option>
+					<option>try filter</option>
+					<option>type something</option>
+				</select>
+			</div><!--/.inline-->
+			<div class="inline">
+				<select class="intro-select2">
+					<option>or this</option>
+					<option>use keyboard</option>
+					<option>looks good</option>
+					<option>or maybe not</option>
+				</select>
+			</div><!--/.inline-->
+			<div class="inline">
+				<select class="intro-select-osx">
+					<option>or this</option>
+					<option>OS X like selects</option>
+					<option>crossbrowser</option>
+				</select>
+			</div><!--/.inline-->
+			<div class="inline">
+				<select class="intro-select-link">
+					<option>or this</option>
+					<option>if you want it</option>
+					<option>to look like a link</option>
+				</select>
+			</div><!--/.inline-->
+			<div class="inline">
+				<select class="intro-select-ie">
+					<option>or even this</option>
+					<option>if you hate the world</option>
+					<option>or just for lulz</option>
+				</select>
+			</div><!--/.inline-->
+		</div><!--/.inlines-->
+
+		<p>Not convinced? Check the <a href="#features" class="features-link">Features</a> list or the <a href="examples.html">Examples</a> page!</p>
+	</section><!--/.intro-->
+
+	<section id="features" class="section features" data-hidden="true">
+		<h2>Features</h2>
+		<div class="clearfix">
+			<div class="col">
+				<ul class="list-unordered">
+					<li>works in all popular browsers including IE6+</li>
+					<li><strong>custom syntax</strong> support</li>
+					<li>works perfect as an <strong>inline-block</strong></li>
+					<li><strong>no z-index bugs</strong> in IE</li>
+					<li><strong>optgroups</strong> support</li>
+					<li>great <strong>API</strong></li>
+					<li><strong>add/remove</strong> &lt;option&gt;'s and &lt;optgroup&gt;'s</li>
+					<li><strong>disable/enable anything</strong> (select, optgoup, option)</li>
+					<li>optional <strong>filter</strong> text field</li>
+					<li>can be used with <strong>hidden parents</strong></li>
+					<li>compatible with <strong>mobile devices</strong></li>
+					<li>behavior is as <strong>authentic</strong> as possible</li>
+					<li><strong>callbacks</strong> and <strong>event triggers</strong></li>
+				</ul>
+			</div>
+			<div class="col">
+				<ul class="list-unordered">
+					<li>
+						<strong>automatic calculations</strong>
+						<ul>
+							<li>dropdown position, so it's always visible when opened</li>
+							<li>needed width for the select or it's dropdown (can be disabled)</li>
+							<li>active option appears in the center of the opened dropdown</li>
+						</ul>
+					</li>
+					<li>
+						<strong>keyboard support</strong>
+						<ul>
+							<li>search by letters/numbers/etc</li>
+							<li>navigation</li>
+							<li>tab and shift+tab</li>
+						</ul>
+					</li>
+					<li><strong>fast</strong> and <strong>easy</strong> to use</li>
+					<li>built with attention to details</li>
+					<li>
+						according to the poll, <strong>100% of people love it</strong>*<br>
+						<small>*of all the five friends I asked</small>
+					</li>
+				</ul>
+			</div>
+		</div><!--/.clearfix-->
+	</section><!--/.features-->
+
+	<section id="install" class="section install">
+		<h2>Installation</h2>
+		<ul class="list-unordered">
+			<li>
+				<p>Include jQuery if it's still not included. The easiest way is to use some public CDN.</p>
+				<pre><code class="html">&lt;script src="//code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;</code></pre>
+			</li>
+			<li>
+				<p>Download latest ikSelect script from <a href="https://github.com/Igor10k/ikSelect/zipball/master">here</a></p>
+			</li>
+			<li>
+				<p>Include ikSelect script after jQuery</p>
+				<pre><code class="html">&lt;script src="ikSelect.min.js"&gt;&lt;/script&gt;</code></pre>
+			</li>
+			<li>
+				<p>Initialize the script somewhere. Better do it after the DOM is ready.</p>
+				<pre><code class="javascript">$(function () {
+	$('select').ikSelect();
+});</code></pre>
+			</li>
+			<li>
+				<p>Add some CSS</p>
+				<pre><code class="css">.ik_select {
+	/*
+	Wraps all the plugin's HTML code.
+	Probably you should not add any styles here
+	*/
+}
+	.ik_select_link {
+		/* Fake select you click on to open the dropdown */
+	}
+	.ik_select_link_focus {
+		/* Focused state of the fake select */
+	}
+	.ik_select_link_disabled {
+		/* Disabled state of the fake select */
+	}
+		.ik_select_link_text {
+			/*
+			Wrapper for the text inside the link.
+			It's best to add some width limiting rules here like
+			display:block;
+			overflow:hidden;
+			white-space:nowrap;
+			text-overflow:ellipsis;
+			*/
+		}
+
+	.ik_select_dropdown {
+		/*
+		Dropdown wrapper. Needed for script calculations.
+		You should not add any visual styles here.
+		You can shift the position of the dropdown
+		by changing top and left values like
+		top: -2px;
+		left: -5px;
+		*/
+	}
+		.ik_select_list {
+			/*
+			Wrapper for the options list.
+			Now that's a good place to add visual styles.
+			*/
+		}
+			.ik_select_optgroup {
+				/* Optgroup */
+			}
+				.ik_select_optgroup_label {
+					/* Optgroup label */
+				}
+				.ik_select_option {
+					/* Option */
+				}
+					.ik_select_option_label {
+						/* Option label */
+					}
+				.ik_select_hover {
+					/* The hovered state of an option */
+				}
+				.ik_select_active {
+					/* The active state of an option */
+				}
+
+		.ik_select_filter_wrap {
+			/* Wrapper for the filter input */
+		}
+		.ik_select_filter {
+			/* Filter input */
+		}
+		.ik_nothing_found {
+			/* Block that's shown when there's nothing found. */
+		}</code></pre>
+			</li>
+		</ul>
+	</section><!--/.install-->
+
+	<section id="options" class="section options">
+		<h2>Options</h2>
+		<p>
+			All the options can be set using HTML5 <strong>data-</strong> attributes or as an object passed to the plugin.
+			For the <strong>data-</strong> attibutes use lowercased options!
+			<em>(data-autowidth="true", data-customclass="someclass", etc)</em>
+		</p>
+		<pre><code class="javascript">syntax: '&lt;div class="ik_select_link"&gt;&lt;span class="ik_select_link_text"&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class="ik_select_dropdown"&gt;&lt;div class="ik_select_list"&gt;&lt;/div&gt;&lt;/div&gt;'
+	/*
+	Custom syntax for the fake select.
+	The only condition is that "ik_select_link_text" should be inside of "ik_select_link" and
+	"ik_select_list" should be inside of "ik_select_dropdown".
+	*/
+
+autoWidth: true,
+	/* Set width of the select according to the longest option. */
+
+ddFullWidth: true,
+	/* Set width of the dropdown according to the longest option. */
+
+equalWidths: true,
+	/* Add dropdown's scrollbar width to the fake select's width. */
+
+dynamicWidth: false,
+	/* Adjust fake select's width according to its contents. */
+
+extractLink: false,
+	/* Tells if fake select should be moved to body when clicked along with the dropdown */
+
+customClass: '',
+	/* Add custom class to the fake select's wrapper. */
+
+linkCustomClass: '',
+	/*
+	Add custom class to the fake select.
+	Uses customClass with '-link' appended if only the former presents.
+	*/
+
+ddCustomClass: '',
+	/*
+	Add custom class to the fake select's dropdown.
+	Uses customClass with '-dd' appended if only the former presents.
+	*/
+
+ddMaxHeight: 200,
+	/* Maximum allowed height for dropdown. */
+
+extraWidth: 0,
+	/*
+	Adds extra pixels to the overall size of the fake select.
+	Useful to overcome WebKit's font rendering bugs by adding 1 pixel to the width.
+	*/
+
+isDisabled: false,
+	/*
+	Set the initial state of the select.
+	Overrides the *disabled* attribute.
+	*/
+
+filter: false,
+	/* Appends filter text input. */
+
+nothingFoundText: 'Nothing found'
+	/* The text to show when filter is on and nothing is found. */</code></pre>
+	</section><!--/.options-->
+
+	<section id="callbacks" class="section callbacks">
+		<h2>Callbacks and events</h2>
+		<p>
+			After each callback there's also an event emitted.
+			Just replace <strong>on</strong> with <strong>ik</strong> and use lowercase.
+			<em>(ikshow, ikkeydown, etc)</em></p>
+		<pre><code class="javascript">onInit: function (inst) {}
+	/* Called just after plugin is initialized. */
+
+onShow: function (inst) {}
+	/* Called just after dropdown was showed. */
+
+onHide: function (inst) {}
+	/* Called just after dropdown was hidden. */
+
+onKeyDown: function (inst) {}
+	/* Called when a key on a keyboard is pressed. */
+
+onKeyUp: function (inst) {}
+	/* Called when a key on a keyboard is released. */
+
+onHoverMove: function (inst) {}
+	/* Called when some other option is hovered. */</code></pre>
+	</section><!--/.callbacks-->
+
+	<section id="api" class="section api">
+		<h2>API</h2>
+		<pre><code class="javascript">$.ikSelect.extendDefaults(settings);
+	/* Override defaults for new instances. */
+
+$(selector).ikSelect('reset');
+	/* Recreates fake select from scratch. */
+
+$(selector).ikSelect('redraw');
+	/*
+	Recalculates dimensions for the dropdown.
+	Use this if select's parent was hidden when ikSelect was applied to it
+	right after *show()*, *fadeIn()* or whatever you are using there.
+	*/
+
+$(selector).ikSelect('addOptions', optionObject[, optionIndex, optgroupIndex]);
+$(selector).ikSelect('addOptions', optionObjectsArray[, optionIndex, optgroupIndex]);
+	/*
+	Add one or many options.
+	By default appends to the dropdown's root.
+	Optionally, tell at what index the option should appear.
+	Optionally, tell to optgroup at what index to add the option.
+	optionIndex is relative to optgroupIndex when the latter presents.
+	*/
+
+$(selector).ikSelect('addOptgroups', optgroupObject[, optgroupIndex]);
+$(selector).ikSelect('addOptgroups', optgroupObjectsArray[, optgroupIndex]);
+	/*
+	Add one or many optgroups.
+	By default appends to the dropdown's root.
+	Optionally, tell at what index the optgroup should appear.
+	*/
+
+$(selector).ikSelect('removeOptions', optionIndex[, optgroupIndex]);
+$(selector).ikSelect('removeOptions', optionIndexesArray[, optgroupIndex]);
+	/*
+	Remove one or many options by index.
+	Optionally, set *optgroupIndex* to look for indexes within particular optgroup.
+	Set *optgroupIndex* as -1 to look only within root.
+	*/
+
+$(selector).ikSelect('removeOptgroups', optgroupIndex);
+$(selector).ikSelect('removeOptgroups', optgroupIndexesArray);
+	/* Remove one or many optgroups by index. */
+
+$(selector).ikSelect('select', optionValue[, isIndex]);
+	/*
+	Change selected option using option's value by default
+	or index if *isIndex* is *true*.
+	*/
+
+$(selector).ikSelect('showDropdown');
+	/*
+	Show fake select's dropdown.
+	Caution: on mobile devices this method shows the fake dropdown, not the native one
+	that is shown by default when tapping on the fake select itself.
+	*/
+
+$(selector).ikSelect('hideDropdown');
+	/* Hide fake select's dropdown. */
+
+$(selector).ikSelect('disable');
+	/*
+	Disable select.
+	Also adds 'ik_select_link_disabled' class to the 'ik_select_link'.
+	*/
+
+$(selector).ikSelect('enable');
+	/*
+	Enable select.
+	Also removes 'ik_select_link_disabled' class from the 'ik_select_link'.
+	*/
+
+$(selector).ikSelect('toggle'[, enableOrDisable]);
+	/*
+	Toggle select's state.
+	Optionally, set *enableOrDisable* as *true* or *false* to specify needed state.
+	*/
+
+$(selector).ikSelect('disableOptions', optionIndexOrValue[, isIndex]);
+$(selector).ikSelect('disableOptions', optionIndexesOrValuesArray[, isIndex]);
+	/*
+	Disable one or many options using option values by default
+	or option indexes if *isIndex* is *true*
+	*/
+
+$(selector).ikSelect('enableOptions', optionIndexOrValue[, isIndex]);
+$(selector).ikSelect('enableOptions', optionIndexesOrValuesArray[, isIndex]);
+	/*
+	Enable one or many options using option values by default
+	or option indexes if *isIndex* is *true*
+	*/
+
+$(selector).ikSelect('toggleOptions', optionIndexOrValue[, isIndex, enableOrDisable]);
+$(selector).ikSelect('toggleOptions', optionIndexesOrValuesArray[, isIndex, enableOrDisable]);
+	/*
+	Toggle one or many optgroups' state.
+	Optionally, set *enableOrDisable* as true/false to specify needed state.
+	*/
+
+$(selector).ikSelect('disableOptgroups', optgroupIndex);
+$(selector).ikSelect('disableOptgroups', optgroupIndexesArray);
+	/* Disable one or many optgroups. */
+
+$(selector).ikSelect('enableOptgroups', optgroupIndex);
+$(selector).ikSelect('enableOptgroups', optgroupIndexesArray);
+	/* Enable one or many optgroups. */
+
+$(selector).ikSelect('toggleOptgroups', optgroupIndex[, enableOrDisable]);
+$(selector).ikSelect('toggleOptgroups', optgroupIndexesArray[, enableOrDisable]);
+	/*
+	Toggle one or many optgroups' state.
+	Optionally, set *enableOrDisable* as true/false to specify needed state.
+	*/
+
+$(selector).ikSelect('detach');
+	/* Detach plugin from select and remove all traces. */</code></pre>
+	</section><!--/.api-->
+
+	<section id="examples" class="section examples">
+		<h2>Examples</h2>
+		<p>Check the <a href="examples.html">Examples</a> page.</p>
+	</section><!--/.examples-->
+
+	<footer class="footer">
+		<div class="author">author: <a href="http://igorkozlov.me">igorkozlov.me</a></div>
+	</footer><!--/.footer-->
+</div><!--/#wrap-->
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="src/jquery.ikSelect.js"></script>
+<script src="docs/js/script.js"></script>
+</body>
+</html>

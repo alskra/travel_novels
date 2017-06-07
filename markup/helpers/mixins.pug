@@ -1,0 +1,14 @@
+mixin resetCase(str)
+  = str[0].toUpperCase() + str.slice(1).toLowerCase()
+
+mixin a(href)
+  a(href= href || voidHref)&attributes(attributes)
+    block
+
+mixin aMail(mail)
+  a(href='mailto:' + mail)&attributes(attributes)= mail
+    block
+
+mixin time()
+  time(datetime='ГГГГ-ММ-ДДTчч:мм:сс±чч:мм')&attributes(attributes)
+    block

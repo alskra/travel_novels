@@ -1,0 +1,15 @@
+.content
+  display table-row
+  height 100%
+
+  &__inner
+    padding 60px 0
+
+  &__col
+    float left
+    &_left
+      width percentage((700 + ($grid-gutter-width/2) + 32.5)/1200)
+      padding 0 32.5px 0 ($grid-gutter-width/2)px
+    &_right
+      width percentage((400 + ($grid-gutter-width/2) + 32.5)/1200)
+      padding 0 ($grid-gutter-width/2)px 0 32.5px

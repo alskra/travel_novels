@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "glyphicons";
+  src: url('../fonts/glyphicons/glyphicons.eot');
+  src: url('../fonts/glyphicons/glyphicons.eot?#iefix') format('eot'),
+  url('../fonts/glyphicons/glyphicons.woff2') format('woff2'),
+  url('../fonts/glyphicons/glyphicons.woff') format('woff'),
+  url('../fonts/glyphicons/glyphicons.ttf') format('truetype'),
+  url('../fonts/glyphicons/glyphicons.svg#glyphicons') format('svg');
+}
+
+.gly:before {
+  font-family: "glyphicons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+.gly-down-flag:before {
+  content: "\E001";
+}

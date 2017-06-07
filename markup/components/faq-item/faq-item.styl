@@ -1,0 +1,90 @@
+.faq-item
+  p
+    &:last-child
+      margin 0
+  &__header
+    display flex
+    align-items flex-start
+    font-size 16px
+    line-height 1.25em
+    padding 15px 0
+    cursor pointer
+    &:hover, &:focus
+      & {$p}__title
+        color $red-1
+      & {$p}__icon
+        color $red-1
+  &__title
+    color #2c2c2c
+    font-weight 500
+    font-size inherit
+    line-height inherit
+    text-transform uppercase
+    overflow hidden
+    flex 1 1 auto
+    margin 0
+    transition color 0.2s
+  &__title-2
+    display none
+    color #2c2c2c
+    font-weight 500
+    font-size 16px
+    line-height 1.25em
+    text-transform uppercase
+    overflow hidden
+    margin 0 0 25px
+    padding-bottom 15px
+    background linear-gradient(#bd212c, #bd212c) no-repeat 0% 100%/46px 1px
+  &__icon
+    width 17px
+    height 17px
+    flex none
+    position relative
+    color #333
+    margin-left 15px
+    transition 0.2s
+    &:before, &:after
+      content ''
+      position absolute
+      width 17px
+      border-top 1px solid
+      top 50%
+      left 0
+      border-radius 1px
+      transition inherit
+    &:after
+      transform rotate(90deg)
+  &__content
+    display none
+    padding 25px 0
+  &_opened
+    & {$p}__header
+      background linear-gradient(#bd212c, #bd212c) no-repeat 0% 100%/46px 1px
+    & {$p}__title
+      color $red-1
+    & {$p}__icon
+      color $red-1
+      &:after
+        transform rotate(0deg)
+
+  @media (min-width $screen-md-min)
+    &__header
+      font-size 12px
+      width 345px
+      padding 0
+      margin 0 0 18px
+      float left
+      clear left
+    &__title
+      padding 0 20px 0 0
+    &__title-2
+      display block
+    &__icon
+      display none
+    &__content
+      width calc(100% - 380px)
+      float right
+      padding 0
+    &_opened
+      & {$p}__header
+        background none

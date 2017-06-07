@@ -1,0 +1,17 @@
+mixin news()
+  // News
+  aside.-news&attributes(attributes)
+    header.__header
+      h3.__title Новости
+      +a().__to-all Все новости
+
+    ul.__list
+      li.__item
+        +a().__link.
+          Этот текст не несет никакого смысла, текст ради текста
+        +time().__date 20.04.17
+      li.__item
+        +a().__link.
+          Этот текст не несет никакого смысла, текст ради текста
+        +time().__date 20.04.17
+  // /News

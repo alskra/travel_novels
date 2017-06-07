@@ -1,0 +1,63 @@
+.slider-main
+  height 250px
+  margin -20px -10px 0
+  background-color #dddbdb
+
+  p
+    margin 0
+
+  .slick-list, .slick-track, .slick-slide
+    height 100%
+
+  .slick-dots
+    position absolute
+    right 0
+    bottom 20px
+    left 0
+
+    li
+      button
+        border-color white
+
+      &.slick-active
+        button
+          background white
+
+  .container-fluid
+    height 100%
+
+  &__item
+    position relative
+
+  &__item-img
+    //
+
+  &__item-text
+    color white
+    font-size rem-calc(18)
+    font-weight 700
+    line-height (29/18)em
+    text-transform uppercase
+    max-height 50%
+    padding 20px 25px 40px
+    position absolute
+    right 0
+    bottom 0
+    left 0
+    background-image linear-gradient(to top, rgba(#2c2c2c, 0.55) 0%, transparent 100%)
+    transition opacity 0.2s linear
+    .loading &
+      opacity 0
+
+  &__text-fix
+    overflow hidden
+    max-height (29/18)em*3
+
+  @media (min-width $screen-sm-min)
+    height 400px
+
+  @media (min-width $screen-md-min)
+    height 400px
+    margin-left 0
+    margin-right 0
+    border 1px solid #ddd

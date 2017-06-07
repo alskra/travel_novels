@@ -1,0 +1,28 @@
+-
+  var menuFootList = [
+    {title: 'Доставка', url: voidHref},
+    {title: 'Оплата', url: voidHref},
+    {title: 'Акции', url: voidHref},
+    {title: 'Новости', url: voidHref},
+    {title: 'Как купить?', url: voidHref},
+    {title: 'Оферта', url: voidHref},
+    {title: 'Контакты', url: voidHref},
+    {title: 'О магазине', url: voidHref}
+  ];
+
+mixin menu-foot(menuFootList)
+  // Menu-foot
+  nav.-menu-foot&attributes(attributes)
+    each item in menuFootList
+      .__item._lvl_1(class={_submenu: item.submenu})
+        a.__btn._lvl_1(href= item.url)
+          span.__label._lvl_1= item.title
+          //- span.__icon._lvl_1(class={'icon icon-angle-right': !item.submenu})
+        if item.submenu
+          .__submenu._lvl_1
+            each itemInner in item.submenu
+              .__item._lvl_2(class={_submenu: itemInner.submenu})
+                a.__btn._lvl_2(href= itemInner.url)
+                  span.__label._lvl_2= itemInner.title
+                  span.__icon._lvl_2(class={'icon icon-angle-right': !itemInner.submenu})
+  // /Menu-foot

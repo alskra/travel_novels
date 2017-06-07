@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "rouble";
+  src: url("../fonts/rouble/rouble.woff") format("truetype"), url("../fonts/rouble/rouble.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}

@@ -1,0 +1,64 @@
+-
+  var menuCatalogueList = [
+    {title: 'Каталог', url: pages.catalogue.url, submenu: [
+        {title: 'Вышивание', url: pages.catalogue.url, submenu: [
+          {title: 'Наборы для вышивания крестом', url: pages.catalogue.url},
+          {title: 'Пункт меню уровень 3', url: voidHref},
+          {title: 'Пункт меню уровень 3', url: voidHref}
+        ]},
+        {title: 'Вязание', url: voidHref, submenu: [
+          {title: 'Пункт меню уровень 3', url: voidHref},
+          {title: 'Пункт меню уровень 3', url: voidHref},
+          {title: 'Пункт меню уровень 3', url: voidHref}
+        ]},
+        {title: 'Декупаж', url: voidHref, submenu: [
+          {title: 'Пункт меню уровень 3', url: voidHref},
+          {title: 'Пункт меню уровень 3', url: voidHref},
+          {title: 'Пункт меню уровень 3', url: voidHref}
+        ]},
+        {title: 'Скрапбукинг', url: voidHref, submenu: [
+          {title: 'Пункт меню уровень 3', url: voidHref},
+          {title: 'Пункт меню уровень 3', url: voidHref},
+          {title: 'Пункт меню уровень 3', url: voidHref}
+        ]},
+        {title: 'Шитье', url: voidHref, submenu: [
+          {title: 'Пункт меню уровень 3', url: voidHref},
+          {title: 'Пункт меню уровень 3', url: voidHref},
+          {title: 'Пункт меню уровень 3', url: voidHref}
+        ]},
+        {title: 'Подарки', url: voidHref},
+        {title: 'Подарочная упаковка', url: voidHref},
+        {title: 'Распродажа', url: voidHref}
+      ]
+    }
+  ];
+
+mixin menu-catalogue(menuCatalogueList, urls)
+  // Menu-catalogue
+  .-menu-catalogue&attributes(attributes)
+    each item in menuCatalogueList
+      .__item._lvl_1(class={_submenu: item.submenu, _current: item.url === urls[0]})
+        a.__btn._lvl_1(href= item.url)
+          if item.submenu
+            span.__icon._lvl_1(class='icon-menu-3 hidden-xs hidden-sm')
+          span.__label._lvl_1= item.title
+          if item.submenu
+            span.__icon._lvl_1(class='icon-plus-1 hidden-md hidden-lg')
+            span.__icon._lvl_1(class='icon-minus-1 hidden-md hidden-lg')
+        // Level 2
+        if item.submenu
+          .__submenu._lvl_1(style={display: 'none'})
+            each item2 in item.submenu
+              .__item._lvl_2(class={_submenu: item2.submenu, _current: item2.url === urls[1]})
+                a.__btn._lvl_2(href= item2.url)
+                  span.__label._lvl_2= item2.title
+                  span.__icon._lvl_2(class={'icon-right-open-mini': true})
+                // Level 3
+                if item2.submenu
+                  .__submenu._lvl_2(style={display: 'none'})
+                    each item3 in item2.submenu
+                      .__item._lvl_3(class={_submenu: item3.submenu, _current: item3.url === urls[1]})
+                        a.__btn._lvl_3(href= item3.url)
+                          span.__label._lvl_3= item3.title
+                          span.__icon._lvl_3(class={'icon-right-open-mini': true})
+  // /Menu-catalogue

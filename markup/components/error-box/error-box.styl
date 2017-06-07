@@ -1,0 +1,26 @@
+.error-box
+  text-align center
+  color #333
+  p
+    margin-bottom 20px
+  &__title
+    color #bcbcbc
+    font-weight 900
+    font-size 16px
+    line-height 1.25em
+    text-transform uppercase
+    margin 0 0 20px
+  &__title-img
+    display block
+    max-width 100%
+    width 210px
+    margin 0 auto 30px
+
+  @media (min-width $screen-sm-min)
+    padding 55px 0
+    &__title-img
+      width 290px
+
+  @media (min-width $screen-md-min)
+    &__title-img
+      width auto

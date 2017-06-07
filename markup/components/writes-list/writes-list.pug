@@ -1,0 +1,60 @@
+include write-item
+
+-
+  var writesList = [
+    {
+      img: 'files/pics/news/wrangler.jpg',
+      title: 'Коллекция Wrangler Denim Performance 2016 Mineraliss cantare, tanquam domesticus nuclear vexatum iacere6',
+      date: '03.12.2016',
+      caption: 'Компания Wrangler выпустила новую коллекцию одежды. Об этом сообщается в пресс-релизе, поступившем в редакцию «Ленты.ру» в понедельник, 25 апреля. ' +
+      'Линейка получила название Active Ready. ' +
+      'В нее вошли так называемые «спортивные джинсы». По словам производителей, они выглядят будто сделаны из денима, но на самом деле сшиты из трикотажной ткани с применением инновационных технологий. Модель представлена в нескольких вариантах: как с поясом на шнуровке, так и в классическом виде — с пятью карманами.',
+    },
+    {
+      img: 'files/pics/news/levis-screenshot81.jpg',
+      title: 'Стиль Levi’s. С головы до ног.',
+      date: '19.11.2016',
+      caption: 'Nunquam pugna bromium. Heu. Hibridas cantare, tanquam audax mineralis. Cum lactea ridetis, omnes abaculuses promissio barbatus, talis ollaes.'
+    },
+    {
+      img: 'files/pics/news/jeans-banner1.jpg',
+      title: 'Levi’s Commuter – непревзойденная функциональность',
+      date: '28.10.2016',
+      caption: 'Ubi est raptus habena? Cum competition volare, omnes gemnaes imitari bassus, festus galluses. Unda etiam ducunt ad peritus cotta. ' +
+      'Boreas de rusticus habitio, desiderium accola! ' +
+      'Pol, a bene sensorem, rumor! Persuadere callide ducunt ad azureus sectam. Triticum de neuter terror, promissio adiurator! Apolloniatess ire! A falsis, vortex altus pulchritudine. Eheu. Est flavum racana, cesaris. Cursus, tabes, et rumor. Accentors favere in avenio! Pius, superbus imbers sed mire contactus de magnum, fidelis gabalium.',
+    },
+    {
+      img: 'files/pics/news/photopins_96884_user_10_AE7XLSTc7KA.jpg',
+      title: 'Джинсовый стиль в одежде: удобный образ на каждый день',
+      date: '13.10.2016',
+      caption: 'Компания Wrangler выпустила новую коллекцию одежды. Об этом сообщается в пресс-релизе, поступившем в редакцию «Ленты.ру» в понедельник, 25 апреля. ' +
+      'Линейка получила название Active Ready. ' +
+      'В нее вошли так называемые «спортивные джинсы». По словам производителей, они выглядят будто сделаны из денима, но на самом деле сшиты из трикотажной ткани с применением инновационных технологий. Модель представлена в нескольких вариантах: как с поясом на шнуровке, так и в классическом виде — с пятью карманами.',
+    },
+    {
+      img: 'files/pics/news/wrangler-jeans-mj-and-stuff.jpg',
+      title: 'Джинсы из интернет-магазина Masterjeans взорвали интернет',
+      date: '27.09.2016',
+      caption: 'Nunquam pugna bromium. Heu. Hibridas cantare, tanquam audax mineralis. Cum lactea ridetis, omnes abaculuses promissio barbatus, talis ollaes. ' +
+      'Caniss sunt frondators de emeritis axona. ' +
+      'Epos undas, tanquam mirabilis luna. Hercle, messor superbus!. Hercle, mensa ferox!, bassus pes! Torus, abactus, et mortem. Hercle, lapsus azureus!. Advena neuter medicina est. Nunquam prensionem barcas. Vae, luba! Ubi est alter historia? Accelerare aegre ducunt ad barbatus lixa. Raptus, grandis fraticinidas hic contactus de ferox, dexter compater.',
+    },
+    {
+      img: 'files/pics/news/bodegon.jpg',
+      title: 'Wrangler применил новые технологии для «спортивных джинсов»',
+      date: '22.08.2016',
+      caption: 'Ubi est raptus habena? Cum competition volare, omnes gemnaes imitari bassus, festus galluses. Unda etiam ducunt ad peritus cotta. ' +
+      'Boreas de rusticus habitio, desiderium accola! ' +
+      'Pol, a bene sensorem, rumor! Persuadere callide ducunt ad azureus sectam. Triticum de neuter terror, promissio adiurator! Apolloniatess ire! A falsis, vortex altus pulchritudine. Eheu. Est flavum racana, cesaris. Cursus, tabes, et rumor. Accentors favere in avenio! Pius, superbus imbers sed mire contactus de magnum, fidelis gabalium.',
+    }
+  ]
+
+mixin writes-list(data)
+  // Writes-list
+  .-writes-list&attributes(attributes)
+    .container-fluid
+      .row
+        each item, index in data
+          +write-item(item)
+  // /Writes-list

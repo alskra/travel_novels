@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello/fontello.eot?40576567');
+  src: url('../fonts/fontello/fontello.eot?40576567#iefix') format('embedded-opentype'),
+       url('../fonts/fontello/fontello.woff2?40576567') format('woff2'),
+       url('../fonts/fontello/fontello.woff?40576567') format('woff'),
+       url('../fonts/fontello/fontello.ttf?40576567') format('truetype'),
+       url('../fonts/fontello/fontello.svg?40576567#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?40576567#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.icon-heart-empty:before { content: '\e819'; } /* '' */
+.icon-user-1:before { content: '\e8cd'; } /* '' */
+.icon-check-1:before { content: '\e8d5'; } /* '' */
+.icon-plus-1:before { content: '\e8d9'; } /* '' */
+.icon-minus-1:before { content: '\e8dc'; } /* '' */
+.icon-left-open-1:before { content: '\e937'; } /* '' */
+.icon-down-open-mini:before { content: '\e93a'; } /* '' */
+.icon-left-open-mini:before { content: '\e93b'; } /* '' */
+.icon-right-open-mini:before { content: '\e93c'; } /* '' */
+.icon-location-inv:before { content: '\eb18'; } /* '' */
+.icon-facebook-6:before { content: '\ecd0'; } /* '' */
+.icon-th-3:before { content: '\ed0b'; } /* '' */
+.icon-th-list-4:before { content: '\ed0c'; } /* '' */
+.icon-menu-3:before { content: '\f008'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-vkontakte:before { content: '\f189'; } /* '' */

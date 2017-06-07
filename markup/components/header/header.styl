@@ -1,0 +1,28 @@
+.header
+  display table-row
+  height 0
+  background-color rgba(white, 0.7)
+
+  &__inner
+    padding 42px 0 32px
+
+  &__logo
+    display block
+    width 197px
+    margin 0 auto 22px
+
+  &__logo-img
+    display block
+    width 100%
+
+  &__nav
+    text-align center
+    color #989b9f
+    font-size rem-calc(14)
+
+  &__nav-item
+    color inherit
+    text-decoration none
+    &:hover, &:focus, &_current
+      color $link-color
+      text-decoration none

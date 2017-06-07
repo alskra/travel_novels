@@ -1,0 +1,9 @@
+mixin header(isSignIn, urls)
+  // Header
+  header.-header&attributes(attributes)
+    .__inner
+      .container-fluid
+        +a('/').-header.__logo: img.__logo-img(src='static/img/general/logo.png' alt='Travel Novels' title='Travel Novels')
+        nav.-header.__nav
+          +a(pages.archive.url).__nav-item(class={_current: pages.archive.url === urls[0]}) Архив
+  // /Header

@@ -1,0 +1,91 @@
+include ../checkbox/checkbox
+include ../range-slider/range-slider
+
+mixin filters()
+  // Filters
+  aside.-filters.aside&attributes(attributes)
+    header.aside__header
+      h3.aside__title #[span.aside__title-icon.icon-left-open-1.hidden-md.hidden-lg]Подобрать товар
+    .__hidden
+      form.__form(action='')
+        .__section
+          .form-row.form-row_checkbox
+            +checkbox('new') Новинки
+          .form-row.form-row_checkbox
+            +checkbox('hit', true) Хит продаж
+          .form-row.form-row_checkbox
+            +checkbox('sale') Распродажа
+
+        .__section
+          .__section-title Цена
+          .form-row
+            +range-slider('price')(data-rs-min='100' data-rs-max='10000' data-rs-from='100' data-rs-to='10000' data-rs-step='100')
+
+        .__section
+          .__section-title По сюжету
+          .form-row
+            label.-form-label
+              span.__text Выберите нужное
+              select.-select._width_100(data-linkcustomclass='text-field' data-ddcustomclass='select__dd')
+                option Весеннее настроение
+                option Сюжет 2
+                option Сюжет 3
+                option Сюжет 4
+                option Сюжет 5
+
+        .__section
+          .__section-title Тип канвы
+          .row
+            .col-xs-12.col-sm-6.col-md-12
+              .form-row.form-row_checkbox
+                +checkbox('type-kanva') 10
+              .form-row.form-row_checkbox
+                +checkbox('type-kanva') 11
+              .form-row.form-row_checkbox
+                +checkbox('type-kanva') 14
+              .form-row.form-row_checkbox
+                +checkbox('type-kanva') 16
+              .form-row.hidden-sm
+            .col-xs-12.col-sm-6.col-md-12
+              .form-row.form-row_checkbox
+                +checkbox('type-kanva') 18
+              .form-row.form-row_checkbox
+                +checkbox('type-kanva') 22
+              .form-row.form-row_checkbox
+                +checkbox('type-kanva') 28
+              .form-row.form-row_checkbox
+                +checkbox('type-kanva') 32
+
+        .__section
+          .__section-title Состав ниток
+          .form-row.form-row_checkbox
+            +checkbox('') Акрил
+          .form-row.form-row_checkbox
+            +checkbox('type-kanva') Хлопок
+            .-filters.__results-lbl
+              .__results-lbl-i Найдено #[+a() 2 товара]
+          .form-row.form-row_checkbox
+            +checkbox('type-kanva') Шерсть
+
+        .__section
+          .__section-title Производитель
+          .form-row
+            label.-form-label
+              span.__text Выберите нужное
+              select.-select._width_100(data-linkcustomclass='text-field' data-ddcustomclass='select__dd')
+                option Gazzal
+                option Производитель 2
+                option Производитель 3
+                option Производитель 4
+                option Производитель 5
+
+        .__section
+          .__section-title Высота, см
+          .form-row
+            +range-slider('price')(data-rs-min='0' data-rs-max='200' data-rs-from='0' data-rs-to='200' data-rs-step='1')
+
+        .__section._btns
+          button.-btn._5(type='reset') #[span.__label Сбросить]
+          button.-btn._6(type='submit') #[span.__label Показать]
+
+  // /Filters

@@ -1,0 +1,16 @@
+{
+  "css_src": [
+    "app_components/bootstrap/css/index.styl",
+    "markup/static/fonts/zero-width/zero-width.css",
+    "markup/static/fonts/glyphicons/glyphicons.css",
+    "app_components/img-object-fit/img-object-fit.css"
+  ],
+  "js_src": [
+    "app_components/modernizr/modernizr-custom.js",
+    "bower_components/jquery/dist/jquery.js",
+    "bower_components/jquery-touch-events/src/jquery.mobile-events.js"
+  ],
+  "fonts_src": [
+    "markup/static/fonts/zero-width"
+  ]
+}

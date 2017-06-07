@@ -1,0 +1,54 @@
+.range-slider
+  clearfix()
+
+  >.irs
+    margin 37px 0 21px
+
+  .irs-min, .irs-max
+    visibility visible !important
+    color #a6a6a6
+    font-size 13px
+    line-height 1em
+    margin 10px 0 0
+
+  .irs-from, .irs-to, .irs-single
+    display none
+
+  .range-slider__input
+    border-style none !important
+
+  .irs-line
+    height 4px
+    background-color #e2e2e2
+
+  .irs-bar
+    height 4px
+    margin -4px 0
+    background-color $brown-1
+
+  .irs-slider
+    &.from, &.to
+      square 18px
+      margin -11px 0
+      border-radius 50%
+      background-color white
+      border 1px solid #e2e2e2
+      cursor pointer
+
+  .text-field
+    font-size 14px
+
+  &__set
+    display flex
+    align-items baseline
+
+  &__set-lbl
+    overflow hidden
+    margin 0 7px 0 0
+
+    &_to
+      margin-left auto
+
+  &__from, &__to
+    flex none
+    width 60px

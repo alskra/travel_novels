@@ -1,0 +1,14 @@
+mixin breadcrumbs(data)
+  // Breadcrumbs
+  nav.-breadcrumbs&attributes(attributes)
+    span.__item
+      +a(pages.index.url).__label= 'Главная'
+      span.__icon.icon-right-open-mini
+    each item, index in data
+      span.__item
+        if index !== data.length - 1
+          +a(item.url).__label= item.title
+          span.__icon.icon-right-open-mini
+        else
+          +a(item.url).__label= item.title
+  // /Breadcrumbs

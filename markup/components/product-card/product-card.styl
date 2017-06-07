@@ -1,0 +1,125 @@
+.product-card
+  color $gray-1
+  padding-bottom 35px
+  margin-bottom 20px
+  border-bottom 1px solid #ddd
+  .tabs
+    font-size $font-size-base
+    line-height $line-height-base
+
+  &__col_2
+    font-size rem-calc(13)
+    line-height (18/13)em
+
+  &__header
+    display flex
+    align-items flex-start
+    justify-content center
+    margin-bottom rem-calc(20)
+
+  &__title
+    flex 1 1 auto
+    overflow hidden
+    margin 0 0 rem-calc(20)
+
+  &__options
+    flex none
+    margin 0
+
+  &__favorites
+    width 22px
+    height 22px
+    color #575757
+    font-size 22px
+    line-height 1em
+    overflow visible
+    &:hover, &:focus, &_active
+      color $brown-1
+
+  &__graph
+    width 22px
+    height 22px
+    color #6e6e6e
+    font-size 20px
+    line-height 1em
+    margin-left 20px
+    &:hover, &:focus, &_active
+      color #575757
+
+  &__has
+    text-align center
+    margin 0 0 20px
+
+  &__has-icon
+    display inline-block
+    vertical-align baseline
+    line-height 1em
+    color $green-1
+    margin-right 8px
+
+  &__prices
+    text-align center
+    margin-bottom 25px
+
+  &__price
+    display inline-block
+    vertical-align middle
+    white-space nowrap
+    color $brown-1
+    font-size 30px
+    line-height 1em
+    margin-right 20px
+
+  &__price-old
+    display inline-block
+    vertical-align middle
+    white-space nowrap
+    color #474747
+    font-size 22px
+    line-height 1em
+    position relative
+    &:before
+      content ''
+      position absolute
+      top 50%
+      left 0
+      right 0
+      margin-top 1px
+      border-top 1px solid
+
+  &__btns
+    display flex
+    justify-content center
+    align-items flex-start
+    flex-flow row wrap
+    margin-bottom 15px
+    .counter
+      margin-right 20px
+
+  &__col
+    &_2
+      margin-bottom 30px
+
+  @media (min-width $screen-sm-min)
+    &__header
+      justify-content flex-start
+
+    &__has
+      text-align left
+
+    &__prices
+      text-align left
+
+    &__btns
+      justify-content flex-start
+
+  @media (min-width $screen-md-min)
+    &__title
+      margin 0
+
+    &__options
+      margin 15px 0 0 20px
+
+    &__col
+      &_2
+        margin-bottom 40px

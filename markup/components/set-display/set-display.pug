@@ -1,0 +1,21 @@
+mixin set-display()
+  // Set-display
+  .-set-display&attributes(attributes)
+    .__col._1
+      label.-form-label
+        span.__text Сортировать
+        select.-select(data-linkcustomclass='text-field' data-ddcustomclass='select__dd')
+          option(selected) По умолчанию
+          option По алфавиту
+          option По цене
+    .__col._2
+      label.-form-label
+        span.__text Показывать
+        select.-select(data-linkcustomclass='text-field' data-ddcustomclass='select__dd')
+          option(selected) 12
+          option 24
+          option 36
+    .__col._3.hidden-xs
+      +a().__view._list._active.btn.icon-th-list-4(data-view='list')
+      +a().__view._grid.btn.icon-th-3(data-view='grid')
+  // /Set-display

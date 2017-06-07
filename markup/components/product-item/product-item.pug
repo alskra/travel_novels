@@ -1,0 +1,51 @@
+mixin product-item(item, category, slick)
+  article.-product-item&attributes(attributes)(class={'slick-slide': slick})
+    +a().__inner
+      if category === 'new'
+        .__label._new Новинка
+      else if category === 'hit'
+        .__label._hit Хит
+      else if category === 'sale'
+        .__label._sale Распродажа
+      .__options
+        button.btn.icon-heart-empty.__favorites(class={_active: item.infavorites} type='button' title='В избранное')
+        button.btn.gly.gly-graph.__graph(type='button' title='')
+      .__img-wrap
+        .__img-wrap-inner
+          if slick
+            img.__img(
+              data-lazy='static/img/content/products-list/130x130/' + item.src + '-130x130.jpg'
+              data-lazy-srcset='static/img/content/products-list/130x130/' + item.src + '-130x130.jpg 1x, ' +
+              'static/img/content/products-list/260x260/' + item.src + '-260x260.jpg 1.25x'
+              title=item.title
+              alt=item.title
+              data-object-fit='contain' onload='objectFit(this)'
+            )
+          else
+            img.__img(
+              src='static/img/content/products-list/130x130/' + item.src + '-130x130.jpg'
+              srcset='static/img/content/products-list/130x130/' + item.src + '-130x130.jpg 1x, ' +
+              'static/img/content/products-list/260x260/' + item.src + '-260x260.jpg 1.25x'
+              title=item.title
+              alt=item.title
+              data-object-fit='contain' onload='objectFit(this)'
+            )
+      .__col._center
+        h3.__title !{item.title}
+        ul.__properties
+          li 50 гр / 90 м
+          li 49 % мериносовая шерсть
+          li 51% акрил
+      footer.__footer
+        .__price-box
+          if item.available
+            if category !== 'new' && category !== 'no-old-price'
+              .__price._old !{item.price[0]}#[span.rouble a]
+              br
+            .__price !{item.price[1]}#[span.rouble a]
+        if item.incart
+          button.btn.btn_2.__status(type='button') #[span.btn__label В корзине]
+        else if !item.available
+          button.btn.btn_3.__status(type='button') #[span.btn__label Нет в наличии]
+        else
+          button.btn.btn_1.__status(type='button') #[span.btn__label В корзину]

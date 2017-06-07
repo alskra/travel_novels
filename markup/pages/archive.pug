@@ -1,0 +1,25 @@
+include ../components/doctype/doctype
+include ../components/header/header
+include ../components/content/content
+include ../components/footer/footer
+
++doctype(pages.archive.title)
+  .-wrapper
+    +header(false, [pages.archive.url])
+    +content
+      .__inner
+        .container-fluid
+          section.-section._2
+            h2.__title Май
+            ul.__ul-list
+              li: +a(pages.Charskie_peski.url)=pages.Charskie_peski.title
+              li: +a(pages.Vulkan_Tyatya.url)=pages.Vulkan_Tyatya.title
+              li: +a(pages.Russkaya_Islandiya.url)=pages.Russkaya_Islandiya.title
+
+          section.-section._2
+            h2.__title Апрель
+            ul.__ul-list
+              li: +a(pages.Puteshestvie_na_Elbrus.url)=pages.Puteshestvie_na_Elbrus.title
+              li: +a(pages.Neobyiknovennyiy_Altay.url)=pages.Neobyiknovennyiy_Altay.title
+
+    +footer

@@ -1,0 +1,16 @@
+.features
+  display flex
+  margin 0 -15px 10px
+  flex-flow row wrap
+  align-items flex-start
+  &__item
+    flex none
+    width unquote('calc(25% - 30px)')
+    margin 0 15px 30px
+    text-align center
+    &:before
+      content ''
+      display block
+      background inline-svg('zbs-icon.svg') no-repeat 50% 0
+      height 55px
+      margin-bottom 20px

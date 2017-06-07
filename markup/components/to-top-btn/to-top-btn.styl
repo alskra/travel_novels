@@ -1,0 +1,22 @@
+.to-top-btn
+  opacity 0.4
+  color #999
+  font-size 70px
+  size 70px 70px
+  line-height 1em
+  border-radius 50%
+  display block
+  text-decoration none !important
+  position relative
+  z-index $zindex-navbar
+  margin 20px auto 0
+  &:hover, &:focus
+    color $red-1
+
+  @media (min-width $screen-sm-min)
+    margin 0 0 0 auto
+
+  @media (min-width $screen-md-min)
+    position fixed
+    right 20px
+    bottom 54px

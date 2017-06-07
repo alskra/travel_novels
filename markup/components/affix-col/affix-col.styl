@@ -1,0 +1,15 @@
+.affix-col
+  clearfix();
+
+  &.affix
+    width 210px
+    position fixed
+    top 20px
+
+  &.affix-bottom
+    width 210px
+    position absolute
+
+  @media (min-width $screen-md-min)
+    position relative
+    z-index $zindex-navbar-fixed

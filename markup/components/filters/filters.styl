@@ -1,0 +1,84 @@
+.filters
+  color #747474
+  .aside__header
+    margin -1px -1px 0
+    cursor pointer
+
+  .aside__title-icon
+    display inline-block
+    vertical-align top
+    margin-right 10px
+
+  &.aside
+    padding 0
+
+  &__section
+    padding 12px 15px 20px
+    &+&
+      border-top 1px solid #e5e5e5
+    &+&_btns
+      border-top 0
+
+    &_btns
+      display flex
+      justify-content space-between
+      align-items flex-start
+      padding-top 20px
+
+  &__section-title
+    margin 0 0 8px
+
+  &__results-lbl
+    color white
+    font-size 11px
+    font-weight 400
+    line-height (18/13)em
+    white-space nowrap
+    margin-top 5px
+    z-index $zindex-dropdown
+    cursor default
+    a
+      color inherit
+      text-decoration underline
+      &:hover, &:focus
+        color inherit
+        text-decoration none
+
+  &__results-lbl-i
+    display inline-block
+    vertical-align top
+    padding 3px 10px
+    background-color $green-1
+    border-radius 2px
+
+  &__hidden
+    display none
+    overflow-y auto
+    width 210px
+    position fixed
+    top 51px
+    bottom 0
+    left 0
+
+  @media (min-width $screen-md-min)
+    .aside__header
+      cursor default
+
+    &__results-lbl
+      font-size 13px
+      height 0
+      position absolute
+      top 50%
+      left 100%
+      margin -15px 15px
+
+    &__results-lbl-i
+      padding 6px 10px
+      position relative
+      left -50%
+      box-shadow 0 1px 10px rgba(80, 80, 80, 0.31)
+
+    &__hidden
+      overflow-y visible
+      width auto
+      position static

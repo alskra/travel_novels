@@ -1,0 +1,94 @@
+.categories-list
+  //max-width 215px*1 + 20px*0
+  max-width 100%
+  margin 0 auto 10px
+
+  &__inner
+    display flex
+    flex-flow row wrap
+    align-items flex-start
+    margin 0 -10px
+
+  &__item
+    flex none
+    color $gray-1
+    font-size 15px
+    line-height 1.25em
+    width calc(100% - 20px)
+    margin 0 10px 10px
+
+  &__item-inner
+    display flex
+    align-items flex-start
+    color $gray-1
+    text-decoration none
+    padding 5px 10px
+    position relative
+    background-color white
+    border 1px solid #d4d4d4
+    border-top-width 6px
+    border-radius 2px
+    transition $transition-base
+    &:before
+      content ''
+      position absolute
+      top -6px
+      right -1px
+      left -1px
+      height 6px
+      background $green-1
+    &:hover, &:focus
+      color $gray-1
+      text-decoration none
+      box-shadow 0 2px 7px rgba(80, 80, 80, 0.17)
+
+  &__item-img-wrap
+    flex none
+    overflow hidden
+    width 50px
+    padding-top 50px
+    margin 0 10px 0 0
+    position relative
+
+  &__item-img
+    position absolute
+    top 0
+    left 0
+
+  &__caption
+    flex 1 1 auto
+    align-self center
+    text-align left
+    text-overflow ellipsis
+    height 1.25em
+
+  @media (min-width 480px)
+    max-width 215px*2 + 20px*1
+
+    &__item
+      width calc(50% - 20px)
+
+  @media (min-width 640px)
+    max-width 215px*3 + 20px*2
+
+    &__item
+      width calc(100%/3 - 20px)
+      margin 0 10px 20px
+
+    &__item-inner
+      display block
+      padding 20px
+
+    &__item-img-wrap
+      width auto
+      padding-top 80.5%
+      margin 0 0 10px
+
+    &__caption
+      text-align center
+
+  @media (min-width 1024px)
+    max-width 215px*4 + 20px*3
+
+    &__item
+      width calc(25% - 20px)

@@ -1,0 +1,63 @@
+.news
+  font-size rem-calc(14)
+  line-height (24/14)em
+  padding-top 5px
+  padding-bottom 9px
+  position relative
+  margin-bottom 20px
+  border 1px solid #d4d4d4
+  border-radius 0px 0px 2px 2px
+  &:before
+    content ''
+    height 6px
+    position absolute
+    top -1px
+    right -1px
+    left -1px
+    background $green-1
+
+  &__header
+    display flex
+    align-items baseline
+    padding 15px 15px 0
+
+  &__title
+    flex 1 1 auto
+    overflow hidden
+    color #474747
+    font-size 18px
+    font-weight 400
+    margin 0
+
+  &__to-all
+    font-size 13px
+    overflow hidden
+
+  &__list
+    list-style none
+    margin 0
+    padding 0
+
+  &__item
+    overflow hidden
+    padding 6px 15px
+    margin 0
+    &:before
+      content normal
+    &:last-child
+      border-radius 0px 0px 2px 2px
+    &+&
+      border-top 1px solid #e5e5e5
+
+  &__link
+    display block
+    color inherit
+    text-decoration none
+    margin-bottom 10px
+    &:hover, &:focus
+      color $green-1
+      text-decoration none
+
+  &__date
+    color #ababab
+    font-size 13px

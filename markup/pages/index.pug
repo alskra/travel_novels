@@ -1,0 +1,106 @@
+include ../components/doctype/doctype
+include ../components/header/header
+include ../components/content/content
+include ../components/footer/footer
+include ../components/form-subscribe/form-subscribe
+
++doctype(pages.index.title)
+  .-wrapper
+    +header(false, [pages.index.url])
+    +content
+      .container-fluid
+        .-articles-list
+          article.-article-item
+            +a(pages.Charskie_peski.url).__inner
+              img.__img(src='static/img/content/articles/265x265/one.jpg'
+              srcset='static/img/content/articles/265x265/one.jpg 1x, static/img/content/articles/530x530/one.jpg 2x'
+              alt=pages.Charskie_peski.title)
+              .__title: h2.__title-inner=pages.Charskie_peski.title
+
+          article.-article-item
+            +a(pages.Vulkan_Tyatya.url).__inner
+              img.__img(src='static/img/content/articles/265x265/two.jpg'
+              srcset='static/img/content/articles/265x265/two.jpg 1x, static/img/content/articles/530x530/two.jpg 2x'
+              alt=pages.Vulkan_Tyatya.title)
+              .__title: h2.__title-inner=pages.Vulkan_Tyatya.title
+
+          article.-article-item
+            +a(pages.Russkaya_Islandiya.url).__inner
+              img.__img(src='static/img/content/articles/265x265/tree.jpg'
+              srcset='static/img/content/articles/265x265/tree.jpg 1x, static/img/content/articles/530x530/tree.jpg 2x'
+              alt=pages.Russkaya_Islandiya.title)
+              .__title: h2.__title-inner=pages.Russkaya_Islandiya.title
+
+          article.-article-item
+            +a(pages.Puteshestvie_na_Elbrus.url).__inner
+              img.__img(src='static/img/content/articles/265x265/four.jpg'
+              srcset='static/img/content/articles/265x265/four.jpg 1x, static/img/content/articles/530x530/four.jpg 2x'
+              alt=pages.Puteshestvie_na_Elbrus.title)
+              .__title: h2.__title-inner=pages.Puteshestvie_na_Elbrus.title
+
+        .row
+          .-content.__col._left
+            .-articles-list-2
+              article.-article-item-2
+                +a(pages.Neobyiknovennyiy_Altay.url).__inner
+                  time(datetime='2017-05-31').__date #[span.gly.gly-down-flag]31 мая 2017
+                  h2.__title=pages.Neobyiknovennyiy_Altay.title
+                  .__cols
+                    .__img: img.__img-inner(src='static/img/content/articles/265x265/five.jpg'
+                    srcset='static/img/content/articles/265x265/five.jpg 1x, static/img/content/articles/530x530/five.jpg 2x'
+                    alt=pages.Neobyiknovennyiy_Altay.title)
+                    .overflow-hidden
+                      .-article-item-2.__caption
+                        p.
+                          Россия удивительна для путешествий, чтобы увидеть одновременную зеленую
+                          Швейцарию и одновременно Монголию, не обязательно пролететь вокруг всего света.
+                          Все это можно найти на Алтае. Гладкие автомобильные дороги здесь проходят через
+                          всю республику, но также здесь есть и высокие перевалы, и бездорожье, по которому
+                          можно проехать только на огромных «зилах».
+                      .-article-item-2.__caption-narrow
+                        p.
+                          Если вы составляете маршрут поездки, то мы настоятельно рекомендуем включить в
+                          путешествие остановку на Телецком озере, в Денисовой пещере, Уймонской долине.
+                          Конечно, обязательно нужно побывать на перевале Кату-Ярык, он настолько крутой,
+                          что вам понадобится мощная заднеприводная машина. Некоторым автомобилистам
+                          приходится останавливаться прямо на перевале и поливать тормоза холодной водой,
+                          поэтому будьте осторожны.
+
+              article.-article-item-2
+                +a(pages.Charskie_peski.url).__inner
+                  time(datetime='2017-04-23').__date #[span.gly.gly-down-flag]23 апреля 2017
+                  h2.__title=pages.Charskie_peski.title
+                  .__cols
+                    .__img: img.__img-inner(src='static/img/content/articles/265x265/one.jpg'
+                    srcset='static/img/content/articles/265x265/one.jpg 1x, static/img/content/articles/530x530/one.jpg 2x'
+                    alt=pages.Charskie_peski.title)
+                    .overflow-hidden
+                      .-article-item-2.__caption
+                        p.
+                          Все любители песчаных барханов могут наблюдать подобные пейзажи, не выезжая за
+                          пределы страны. В Забайкальском крае существует место, полное противоречий.
+                          Называется оно — Чарские пески. Оно сочетает в себе глухую болотистую тайгу и
+                          песчаную пустыню, с двух сторон окруженную горными хребтами: Кодарским,
+                          Удоканским и Каларским. Только не обращайте внимание на странное соседство, это
+                          самая настоящая пустыня! Здесь случаются песчаные бури, а высота барханов
+                          достигает 80-ти метров.
+                      .-article-item-2.__caption-narrow
+                        p.
+                          В пустыне показываются участки, покрытые травами. В некоторых местах из-под
+                          песков сочится вода, которая вытекает в лесной ручей. Чарские пески — это
+                          незамерзающая земля, посреди многолетней мерзлоты. Подземные воды, наверное,
+                          только в этом месте способны выбраться на поверхность.
+
+              .text-center
+                +a().-btn._1 #[span.__label Хочу ещё]
+
+          .-content.__col._right
+            +form-subscribe()
+
+            section.-section._1
+              h3.__title О нас
+              p.
+                Travel Novels — это блог двух российских путешественников из Ростова-на-Дону, Тани и Димы.
+                Рассказываем о своих путешествиям по городам России и делимся историями, что нередко случаются во время поездок.
+                Летом мы ездим на природу, зимой качуем по городам. Приятного чтения!
+    +footer

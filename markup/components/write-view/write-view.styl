@@ -1,0 +1,26 @@
+.write-view
+  p
+    &:last-child
+      margin-bottom 0
+  &__date
+    color #cbcbcb
+    font-weight 500
+    font-size 12px
+    line-height 1.25em
+    text-transform uppercase
+    display block
+    margin-bottom 10px
+  &__title
+    font-size 18px
+    margin 0 0 20px
+
+  @media (min-width $screen-sm-min)
+    &__header
+      display flex
+    &__date
+      flex none
+      order 1
+      margin 6px 0 0 20px
+    &__title
+      flex 1 1 auto
+      overflow hidden

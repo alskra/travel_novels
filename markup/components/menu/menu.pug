@@ -1,0 +1,29 @@
+-
+  var menuList = [
+    {title: 'Главная', url: pages.index.url},
+    {title: 'Доставка', url: voidHref},
+    {title: 'Оплата', url: voidHref},
+    {title: 'Акции', url: voidHref},
+    {title: 'Новости', url: voidHref},
+    {title: 'Контакты', url: voidHref}
+  ];
+
+include ../menu-catalogue/menu-catalogue
+
+mixin menu(menuList, urls)
+  // Menu
+  nav.-menu&attributes(attributes)
+    each item in menuList
+      .__item._lvl_1(class={_submenu: item.submenu, _current: item.url === urls[0]})
+        a.__btn._lvl_1(href= item.url)
+          span.__label._lvl_1= item.title
+          //- span.__icon._lvl_1 &nbsp;
+        if item.submenu
+          .__submenu._lvl_1
+            each itemInner in item.submenu
+              .__item._lvl_2(class={_submenu: itemInner.submenu, _current: itemInner.url === urls[1]})
+                a.__btn._lvl_2(href= itemInner.url)
+                  span.__label._lvl_2= itemInner.title
+                  span.__icon._lvl_2 &nbsp;
+    +menu-catalogue(menuCatalogueList, urls)
+  // /Menu

@@ -1,0 +1,9 @@
+mixin form-subscribe()
+  // Form-subscribe
+  form.-form-subscribe(action='')&attributes(attributes)
+    .__title
+      img.__title-img(src='static/img/general/logo.png' alt='Travel Novels')
+      | Путешествуйте с нами
+    input.__field(type='email' placeholder='Введите e-mail')
+    button.__btn.btn.btn_2(type='submit') #[span.btn__label Подписаться]
+  // /Form-subscribe

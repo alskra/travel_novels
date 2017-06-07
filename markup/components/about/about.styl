@@ -1,0 +1,18 @@
+.about
+  display flex
+  p
+    margin 0
+  &__item
+    width unquote('calc(100%/3 - 30px)')
+    margin 0 15px 15px
+    &:before
+
+    &:nth-child(1)
+      &:before
+        background-image inline-svg('icon-delivery.svg')
+    &:nth-child(2)
+      &:before
+        background-image inline-svg('icon-sert.svg')
+    &:nth-child(3)
+      &:before
+        background-image inline-svg('icon-money.svg')

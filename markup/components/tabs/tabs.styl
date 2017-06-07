@@ -1,0 +1,38 @@
+.tabs
+  &__nav
+    display flex
+    list-style none
+    padding 0
+    margin 0 0 20px
+
+  &__nav-item
+    overflow hidden
+    margin 0
+    &:before
+      content normal
+    &+&
+      margin-left 20px
+
+  &__nav-btn
+    display block
+    color #474747
+    text-decoration none
+    font-size 15px
+    line-height 1em
+    text-overflow ellipsis
+    padding-bottom 13px
+    border-bottom 3px solid transparent
+    &:hover, &:focus
+      color $green-1
+      text-decoration none
+    .active &
+      color $green-1
+      border-bottom-color $green-1
+
+  @media (min-width $screen-sm-min)
+    &__nav-item
+      &+&
+        margin-left 50px
+
+    &__nav-btn
+      font-size 18px

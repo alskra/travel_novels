@@ -1,0 +1,48 @@
+.checkbox
+  display inline-flex
+  vertical-align top
+  align-items flex-start
+  color $gray-1
+  font-size 14px
+  line-height (18/14)em
+  position relative
+  margin-left 24px
+
+  &__icon
+    flex none
+    color white
+    text-align center
+    square 14px
+    position absolute
+    top (18/14/2)em
+    left -24px
+    margin -7px 0
+    background-color white
+    border 1px solid #e5e5e5
+    border-radius 2px
+    cursor pointer
+    transition $transition-base
+    &:before
+      font-size 13px
+      line-height 12px
+
+  &__label
+    flex 1 1 auto
+    overflow hidden
+
+  &__input
+    clip rect(0, 0, 0, 0)
+    position absolute
+    width 0
+    height 0
+    &:focus
+      &+{$p}__icon
+        border-color #b9b9b9
+    &:checked
+      &+{$p}__icon
+        background-color $green-1
+        border-color $green-1
+
+      &:focus
+        &+{$p}__icon
+          border-color $green-2

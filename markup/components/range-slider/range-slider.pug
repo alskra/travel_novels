@@ -1,0 +1,8 @@
+mixin range-slider(name)
+  .-range-slider&attributes(attributes)
+    .__set
+      .__set-lbl от
+      input.__from.text-field(type='text')
+      .__set-lbl._to до
+      input.__to.text-field(type='text')
+    input.__input(type='text' name=name)

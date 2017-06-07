@@ -1,0 +1,19 @@
+[data-object-fit] {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  visibility: hidden;
+  /*-webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;*/
+}
+
+[data-object-fit='contain'] {
+  background-size: contain;
+  object-fit: contain;
+}

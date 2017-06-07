@@ -1,0 +1,104 @@
+$max-width-prod-list = 215px
+.products-list
+  max-width $max-width-prod-list
+  margin 0 auto
+  .product-item
+    flex none
+    width calc(100% - 20px)
+    margin 0 10px 20px
+  .slick-list
+    margin 0 -10px
+
+  &__inner:not(.slick-slider)
+    display flex
+    flex-flow row wrap
+    align-items flex-start
+    margin 0 -10px
+
+  &__inner.slick-slider
+    overflow hidden
+
+  &_view_list
+    max-width none
+    .product-item
+      width 100%
+      margin 0 0 20px
+      &__inner
+        display flex
+        align-items flex-start
+        padding 14px 60px 14px 55px
+      &__img-wrap
+        flex none
+        width 110px
+        margin 0 65px 0 0
+      &__col_center
+        flex 1 1 auto
+        overflow hidden
+      &__title
+        text-overflow ellipsis
+        height auto
+        margin-top 21px
+        margin-bottom 23px
+      &__properties
+        text-overflow ellipsis
+        li
+          display inline
+          &+li:before
+            content '\00A0\00A0\00A0\00A0|\00A0\00A0\00A0\00A0\00A0'
+            color inherit
+            font-family inherit
+            font-size 8px
+            position static
+      &__footer
+        display block
+        flex none
+        margin 0 0 0 20px
+      &__options
+        right 10px
+      &__price-box
+        display flex
+        flex-flow column
+        justify-content center
+        align-items flex-start
+        height 45px
+        margin 6px 0 11px
+      &__status
+        width 112px
+        margin 0
+
+    & {$p}__inner
+      display block
+      margin 0
+
+  @media (min-width 480px)
+    max-width $max-width-prod-list*2 + 20px*1
+    .product-item
+      width calc(50% - 20px)
+
+    &_view_list
+      max-width none
+      .product-item
+        width 100%
+
+  @media (min-width $screen-sm-min)
+    max-width $max-width-prod-list*3 + 20px*2
+    .product-item
+      width calc(100%/3 - 20px)
+
+    &_view_list
+      max-width none
+      .product-item
+        width 100%
+
+  @media (min-width $screen-md-min)
+    margin 0
+
+  @media (min-width $screen-lg-min)
+    max-width $max-width-prod-list*4 + 20px*3
+    .product-item
+      width calc(100%/4 - 20px)
+
+    &_view_list
+      max-width none
+      .product-item
+        width 100%

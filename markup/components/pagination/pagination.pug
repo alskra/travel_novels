@@ -1,0 +1,10 @@
+mixin pagination()
+  .-pagination&attributes(attributes)
+    .__inner
+      +a().__item.btn.icon-left-open-mini
+      +a().__item.btn 1
+      span.__item._current.btn 2
+      +a().__item.btn 3
+      span.__item._hellip.btn &hellip;
+      +a().__item.btn 28
+      +a().__item.btn.icon-right-open-mini
