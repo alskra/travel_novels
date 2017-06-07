@@ -24,6 +24,7 @@ include ../components/doctype/doctype
             each modal, index in modals
               li
                 +a(modal.url)(data-toggle='modal-ajax') #{modal.title} #[small (#{modal.url})]
+            li #[+a()(data-fancybox='privacy-policy' data-type='ajax' data-src='popups/privacy-policy.html' data-selector='.modal') Политика конфиденциальности]
 
   footer.__footer
     div &nbsp;
